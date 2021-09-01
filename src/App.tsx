@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router';
-import { Navigation, Home, Quiz, QuestionAndAnswers, Results } from './components/index';
+import { Navigation, Home, Quiz, QuestionAndAnswers, Results, Notfound } from './components/index';
 import { getQuizzes } from './utils/getQuizzes';
 import { ServerError } from './context/data-context.types';
 import { useData } from "./context/data-context";
@@ -29,6 +29,7 @@ export default function App() {
         <Route path="/quizzes"  element={<Quiz />} />
         <Route path="/play/quiz/:quizId" element={<QuestionAndAnswers />} />
         <Route path="/results" element={<Results />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
   );

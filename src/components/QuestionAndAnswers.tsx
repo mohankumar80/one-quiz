@@ -24,7 +24,7 @@ export default function QuestionAndAnswers() {
         setIsSelected(optionId)
     }
 
-    const checkQuiz = () => {
+    const changeQuestion = () => {
         if(questionNo === questions!.length - 1) {
             return navigate('/results');
         } else {
@@ -72,7 +72,11 @@ export default function QuestionAndAnswers() {
                 </div>
             }
             </div>
-            <button onClick={() => checkQuiz()} className="bg-gray-500 rounded py-2 px-4 hover:bg-gray-700 hover:text-white"> 
+            <button 
+                onClick={() =>  changeQuestion()} 
+                className="bg-gray-500 rounded py-2 px-4 hover:bg-gray-700 hover:text-white"
+                disabled={ isSelected ? false : true }
+            > 
                 next 
             </button>
         </div>
