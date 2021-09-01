@@ -36,7 +36,7 @@ export default function QuestionAndAnswers() {
 
     return (
         <div className="QandA">
-            <div className="sm:max-w-sm flex flex-row justify-center items-stretch">
+            <div className="flex flex-row justify-center items-stretch">
             {
                 currentQuestion &&
                 <div className="m-2 p-4 border shadow-lg rounded-lg py-2" key={currentQuestion._id}>
