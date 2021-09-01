@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { useData } from '../context/data-context'
 
 export default function Results() {
 
-    const { state: { finalScore }, dispatch } = useData();
-
-    useEffect(() => {
-        dispatch({ type: "RESET" })
-    }, [dispatch])
+    const { state: { finalScore } } = useData();
 
     return (
         <div className="Results flex flex-col justify-center items-center">
