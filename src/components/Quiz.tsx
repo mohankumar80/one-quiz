@@ -7,6 +7,7 @@ export default function Quiz() {
     const { state } = useData();
 
     return <div className="Quiz flex flex-col md:flex-row justify-center items-stretch">
+        { !state.quizData && <h2 className="text-2xl font-bold my-8">loading...</h2> }
         {
             state.quizData?.map(quiz => {
                 return <div key={quiz._id} className="m-8 border border-gray-500 p-2 pb-6 rounded max-w-xs max-h-xs">
