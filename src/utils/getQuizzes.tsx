@@ -3,7 +3,7 @@ import { QuizzesType, ServerError } from '../context/data-context.types';
 
 export const getQuizzes = async (): Promise<QuizzesType | ServerError> => {
     try {
-     const response = await axios.get<QuizzesType>('https://quiz-backend.purammohanmohan.repl.co/quizzes');
+     const response = await axios.get<QuizzesType>('https://one-quiz-backend.herokuapp.com/quizzes');
      return response.data;
     } catch (error) {
      if(axios.isAxiosError(error)) {
